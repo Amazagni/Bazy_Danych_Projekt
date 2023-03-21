@@ -19,4 +19,4 @@ Skrypty SQL:
 
 -możliwe również utworzenie interfejsu użytkownika umożliwiającą zarządzanie biblioteką i wypożyczaniem książek.
 
--biblioteka poleca, czyli nowości w naszej bibliotece
+-biblioteka poleca, czyli nowości w naszej bibliotece, ksiązki powyżej 10 wypożyczeń w ciągu roku
