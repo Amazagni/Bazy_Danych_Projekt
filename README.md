@@ -1,4 +1,4 @@
-Projekt biblioteki ma powstać w oparciu o MongoDB:
+Projekt biblioteki ma powstać w oparciu o Oracle PL/SQL:
 
 Propozycje tabel:
 1. Informacje o książkach, w tym tytuł, autor, data wydania, wydawnictwo, gatunek, liczba egzemplarzy i dostępność
