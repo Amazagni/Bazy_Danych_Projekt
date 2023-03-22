@@ -1,3 +1,10 @@
+Marcin Chudy
+Ardian Madej
+mchudy@student.agh.edu.pl
+adrianmadej@student.agh.edu.pl
+
+
+
 Projekt biblioteki ma powstać w oparciu o Oracle PL/SQL:
 
 Propozycje tabel:
