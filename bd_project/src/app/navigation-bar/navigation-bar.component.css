@@ -1,0 +1,26 @@
+#navContainer{
+  margin:none;
+  position: relative;
+  display:flex;
+  width: 98vw;
+  background-color: lightblue;
+  height: 70px;
+  z-index: 30;
+}
+
+.button{
+  width: 180px;
+  padding: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  background-color: white;
+  color: rgb(3, 130, 180);
+  border:1px solid rgb(3, 130, 180);
+  cursor: pointer;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+
+}
