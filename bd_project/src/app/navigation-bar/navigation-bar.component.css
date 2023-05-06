@@ -1,22 +1,22 @@
-#navContainer{
-  margin:none;
+#nav_container{
+  margin:0;
   position: relative;
   display:flex;
-  width: 98vw;
-  background-color: lightblue;
-  height: 70px;
+  justify-content: space-around;
+	background-color: #333;
+  height: 80px;
   z-index: 30;
 }
 
 .button{
   width: 180px;
   padding: 20px;
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-top: 10px;
   background-color: white;
-  color: rgb(3, 130, 180);
+  color: #333;
   border:1px solid rgb(3, 130, 180);
   cursor: pointer;
+  border-radius: 20px;
 }
 
 p{

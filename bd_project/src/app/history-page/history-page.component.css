@@ -1,0 +1,61 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2.5em;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+main {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	margin: 20px 0;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #333;
+	color: #fff;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tfoot td {
+	border-top: 2px solid #333;
+	font-weight: bold;
+}
+
+tfoot td:last-child {
+	text-align: right;
+}

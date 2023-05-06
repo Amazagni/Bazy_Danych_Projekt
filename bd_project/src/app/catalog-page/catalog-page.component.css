@@ -1,0 +1,55 @@
+.card_container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+.card {
+  color: white;
+  position:relative;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 50px;
+  width: 280px;
+	background-color: #333;
+  height: 400px;
+  border-radius: 20px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 0px;
+}
+.category{
+  text-align: center;
+  margin-top: 0;
+  opacity: 50%;
+  margin-bottom: 3px;
+
+}
+.author {
+  margin-top: 0px;
+  text-align: center;
+}
+.description {
+
+  text-align: center;
+}
+.reserve {
+  width: 160px;
+  height: 50px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 10px;
+  background-color: rgb(75, 172, 75);
+  border: none;
+  border-radius: 20px;
+  left: 50%;
+  margin-left: -80px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
