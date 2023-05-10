@@ -1,5 +1,5 @@
 Marcin Chudy
-Ardian Madej
+Adrian Madej
 mchudy@student.agh.edu.pl
 adrianmadej@student.agh.edu.pl
 
