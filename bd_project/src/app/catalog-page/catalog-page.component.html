@@ -1,44 +1,9 @@
 <div class="card_container">
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
+  <div class="card" *ngFor="let book of books">
+    <h2 class="title">{{book.Title}}</h2>
+    <h4 class="category">{{book.Genre}}</h4>
     <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
-    <button class="reserve">Wypożycz</button>
-  </div>
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
-    <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
-    <button class="reserve">Wypożycz</button>
-  </div>
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
-    <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
-    <button class="reserve">Wypożycz</button>
-  </div>
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
-    <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
-    <button class="reserve">Wypożycz</button>
-  </div>
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
-    <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
-    <button class="reserve">Wypożycz</button>
-  </div>
-  <div class="card">
-    <h2 class="title">Tytuł</h2>
-    <h4 class="category">Kategoria</h4>
-    <h3 class="author">Autor</h3>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus eos fugit ea nemo voluptas ducimus nulla, distinctio dolor laudantium quo.</p>
+    <p class="description">{{book.Description}}</p>
     <button class="reserve">Wypożycz</button>
   </div>
 </div>

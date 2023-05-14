@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { HistoryPageComponent } from './history-page/history-page.component';
+import { CatalogPageComponent } from './catalog-page/catalog-page.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { HistoryPageComponent } from './history-page/history-page.component';
     NavigationBarComponent,
     HomePageComponent,
     HistoryPageComponent,
+    CatalogPageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

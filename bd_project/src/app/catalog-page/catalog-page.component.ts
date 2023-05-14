@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-catalog-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CatalogPageComponent implements OnInit {
 
-  constructor() { }
+  books: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get<any[]>('/api/data').subscribe((data) => {
+      this.books = data;
+      console.log(this.books);
+    });
   }
 
 }
