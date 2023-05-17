@@ -11,20 +11,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td>W pustyni i w puszczy</td>
-						<td>15-04-2023</td>
-						<td>22-04-2023</td>
-					</tr>
-					<tr>
-						<td>Pan Tadeusz</td>
-						<td>01-03-2023</td>
-						<td>08-03-2023</td>
-					</tr>
-					<tr>
-						<td>Mały Książę</td>
-						<td>15-01-2023</td>
-						<td>22-01-2023</td>
+					<tr *ngFor="let book of user.Borrow">
+						<td>{{book.BokID}}</td>
+						<td>{{book.BorrowDate}}</td>
+						<td>{{book.ReturnDate}}</td>
 					</tr>
 				</tbody>
 			</table>
