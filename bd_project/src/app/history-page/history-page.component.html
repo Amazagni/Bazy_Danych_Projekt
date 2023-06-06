@@ -1,5 +1,7 @@
 <body>
 	<main>
+    <script>
+    </script>
 		<section>
 			<h2>Historia wypożyczeń</h2>
 			<table>
@@ -11,10 +13,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr *ngFor="let book of user.Borrow">
-						<td>{{book.BokID}}</td>
-						<td>{{book.BorrowDate}}</td>
-						<td>{{book.ReturnDate}}</td>
+					<tr *ngFor="let book of user.borrowedBooks">
+						<td>{{book.bookDetails.Title}}</td>
+						<td>{{formatDate(book.BorrowDate)}}</td>
+						<td>{{formatDate(book.ReturnDate)}}</td>
 					</tr>
 				</tbody>
 			</table>

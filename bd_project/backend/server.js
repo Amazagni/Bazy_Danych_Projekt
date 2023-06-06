@@ -26,12 +26,36 @@ app.get('/api/data', async (req, res) => {
       },
       {
         $unwind: "$Author"
-      }
+      },
     ];
+
+    const userPipeline = [
+      {
+        $unwind: "$Borrow"
+      },
+      {
+        $lookup: {
+          from: "book",
+          localField: "Borrow.BookID",
+          foreignField: "Copies.BookID",
+          as: "Borrow.bookDetails"
+        }
+      },
+      {
+        $unwind: "$Borrow.bookDetails"
+      },
+      {
+        $group: {
+          _id: "$_id",
+          username: { $first: "$username" },
+          borrowedBooks: { $push: "$Borrow" }
+        }
+      }
+  ]
 
     const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
 
-    const userData = await db.collection("user").find().toArray();
+    const userData = await db.collection("user").aggregate(userPipeline).toArray();
 
     res.json({ bookData, userData });
   } catch (e) {

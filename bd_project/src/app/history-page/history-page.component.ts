@@ -24,4 +24,14 @@ export class HistoryPageComponent implements OnInit {
     });
   }
 
+  formatDate(dateString: string) {
+    if (dateString == null) {
+      return "Wypożyczona"
+    }
+    const date = new Date(dateString);
+    const formattedDate = `${date.getUTCDate()}-${date.getUTCMonth() + 1}-${date.getUTCFullYear()}`;
+    return formattedDate;
+  };
 }
+
+
