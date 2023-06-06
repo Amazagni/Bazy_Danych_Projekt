@@ -18,8 +18,7 @@ export class HistoryPageComponent implements OnInit {
   ngOnInit() {
     this.http.get<any[]>('/api/data').subscribe((data) => {
       this.data = data;
-      this.users = this.data.userData;
-      this.user = this.users.find((u) => u._id === this.userId);
+      this.user = this.data.userData[0];
       console.log(this.user);
     });
   }

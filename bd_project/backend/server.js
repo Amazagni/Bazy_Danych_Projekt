@@ -1,9 +1,10 @@
 const { MongoClient } = require('mongodb');
+const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const bodyParser = require("body-parser");
 const port = 3080;
-
+const userId = '6460d1e3ac388251224c672f';
 app.use(bodyParser.json());
 
 // Retrieve data from MongoDB and send it back to the frontend
@@ -14,7 +15,6 @@ app.get('/api/data', async (req, res) => {
   try {
     await client.connect();
     const db = client.db("library");
-
     const bookPipeline = [
       {
         $lookup: {
@@ -30,6 +30,11 @@ app.get('/api/data', async (req, res) => {
     ];
 
     const userPipeline = [
+      {
+        $match: {
+          _id: new mongoose.Types.ObjectId('6460d1e3ac388251224c672f')
+        }
+      },
       {
         $unwind: "$Borrow"
       },
