@@ -21,4 +21,25 @@ export class CatalogPageComponent implements OnInit {
     });
   }
 
+  borrow(_id: string) {
+    {
+      this.http.post('http://localhost:3080/borrow/' + _id, {}).subscribe(
+        (response) => {
+          console.log(response);
+          console.log("dziala!")
+          // Tutaj możesz obsłużyć odpowiedź z serwera po udanej zmianie ilości danych książek
+        },
+        (error) => {
+          if (error.statusText == 'OK') {
+            alert('Książka została wypożyczona!')
+          }
+          else {
+            alert('Wystąpił błąd: ' + error.error)
+            console.log(error)
+          }
+          // Tutaj możesz obsłużyć błąd związany z żądaniem HTTP
+        });
+
+    }
+  }
 }

@@ -4,6 +4,6 @@
     <h4 class="category">{{book.Genre}}</h4>
     <h3 class="author">{{book.Author.FirstName}} {{book.Author.LastName}}</h3>
     <p class="description">{{book.Description}}</p>
-    <button class="reserve">Wypożycz</button>
+    <button class="reserve" (click)="borrow(book._id)">Wypożycz</button>
   </div>
 </div>

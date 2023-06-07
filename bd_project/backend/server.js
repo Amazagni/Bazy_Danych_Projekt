@@ -1,20 +1,21 @@
 const { MongoClient } = require('mongodb');
 const mongoose = require('mongoose');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
 const port = 3080;
 const userId = '6460d1e3ac388251224c672f';
 app.use(bodyParser.json());
+app.use(cors());
 
 // Retrieve data from MongoDB and send it back to the frontend
 app.get('/api/data', async (req, res) => {
   const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
   const client = new MongoClient(uri);
-
+  await client.connect();
+  const db = client.db("library");
   try {
-    await client.connect();
-    const db = client.db("library");
     const bookPipeline = [
       {
         $lookup: {
@@ -68,6 +69,50 @@ app.get('/api/data', async (req, res) => {
     res.json({ error: "Failed to retrieve data from database" });
   } finally {
     await client.close();
+  }
+});
+
+app.post('/borrow/:id', async (req, res) => {
+  try {
+    const _id = req.params.id;
+    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
+    const client = new MongoClient(uri);
+    await client.connect();
+    const db = client.db("library");
+
+    const Copy = await db.collection("book").aggregate([
+      { $match: { _id: new mongoose.Types.ObjectId(_id) } },
+      { $unwind: '$Copies' },
+      { $match: { 'Copies.Available': true } },
+      { $sample: { size: 1 } }
+    ]).toArray();
+
+    if (Copy.length === 0) {
+      res.status(404).send('Brak dostępnych egzemplarzy');
+      return;
+    }
+    console.log(Copy[0].Copies.BookID)
+    const result = await db.collection("book").updateOne(
+      {
+        _id: new mongoose.Types.ObjectId(_id),
+        'Copies.BookID': Copy[0].Copies.BookID
+      },
+      {
+        $inc: { InStock: -1 },
+        $set: { 'Copies.$.Available': false }
+      }
+    );
+
+    if (result.modifiedCount === 0) {
+      res.status(404).send('Egzemplarz książki nie jest dostępny.');
+    } else {
+      res.send('Książka została wypożyczona.');
+    }
+
+    client.close();
+  } catch (err) {
+    console.error('Błąd przy wypożyczaniu książki:', err);
+    res.status(500).send('Wystąpił błąd przy wypożyczaniu książki.');
   }
 });
 
