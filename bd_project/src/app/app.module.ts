@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { HistoryPageComponent } from './history-page/history-page.component';
 import { CatalogPageComponent } from './catalog-page/catalog-page.component';
 import { CommonModule } from '@angular/common';
+import { ReturnPageComponent } from './return-page/return-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CommonModule } from '@angular/common';
     NavigationBarComponent,
     HomePageComponent,
     HistoryPageComponent,
-    CatalogPageComponent
+    CatalogPageComponent,
+    ReturnPageComponent
   ],
   imports: [
     BrowserModule,

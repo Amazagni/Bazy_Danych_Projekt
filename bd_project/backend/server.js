@@ -33,7 +33,7 @@ app.get('/api/data', async (req, res) => {
     const userPipeline = [
       {
         $match: {
-          _id: new mongoose.Types.ObjectId('6460d1e3ac388251224c672f')
+          _id: new mongoose.Types.ObjectId(userId)
         }
       },
       {
@@ -107,7 +107,7 @@ app.post('/borrow/:id', async (req, res) => {
       res.status(404).send('Egzemplarz książki nie jest dostępny.');
     } else {
       await db.collection("user").updateOne(
-        {_id: new mongoose.Types.ObjectId('6460d1e3ac388251224c672f')},
+        {_id: new mongoose.Types.ObjectId(userId)},
         { $push: {Borrow: {
           BookID: Copy[0].Copies.BookID,
           BorrowDate: new Date(),
@@ -123,6 +123,38 @@ app.post('/borrow/:id', async (req, res) => {
     res.status(500).send('Wystąpił błąd przy wypożyczaniu książki.');
   }
 });
+
+app.post('/return/:id', async (req, res) => {
+  try {
+    const BookID = parseInt(req.params.id);
+    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
+    const client = new MongoClient(uri);
+    await client.connect();
+    const db = client.db("library");
+
+    const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
+    console.log(user)
+    if (user) {
+      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID);
+      console.log(borrowedBook.ReturnDate)
+      if (borrowedBook.ReturnDate != null) {
+        res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
+      }
+      else {
+      borrowedBook.ReturnDate = new Date();
+      await db.collection('user').updateOne({ _id: user._id }, { $set: { Borrow: user.Borrow } });
+      res.send('Książka została zwrócona.');
+      }}
+    else {
+      res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
+    }
+
+    client.close();
+  } catch (err) {
+    console.error('Błąd podczas aktualizacji ReturnDate:', err);
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Server listening on the port::${port}`);
