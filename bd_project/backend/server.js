@@ -106,6 +106,14 @@ app.post('/borrow/:id', async (req, res) => {
     if (result.modifiedCount === 0) {
       res.status(404).send('Egzemplarz książki nie jest dostępny.');
     } else {
+      await db.collection("user").updateOne(
+        {_id: new mongoose.Types.ObjectId('6460d1e3ac388251224c672f')},
+        { $push: {Borrow: {
+          BookID: Copy[0].Copies.BookID,
+          BorrowDate: new Date(),
+          ReturnDate: null,
+          ExpectedReturnDate: new Date(new Date().getTime() + (14 * 24 * 60 * 60 * 1000))
+        }}})
       res.send('Książka została wypożyczona.');
     }
 
