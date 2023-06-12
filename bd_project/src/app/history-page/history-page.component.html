@@ -10,6 +10,7 @@
 						<th>Tytuł książki</th>
 						<th>Data wypożyczenia</th>
 						<th>Data zwrotu</th>
+            <th>Przewidywana data zwrotu</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -17,6 +18,7 @@
 						<td>{{book.bookDetails.Title}}</td>
 						<td>{{formatDate(book.BorrowDate)}}</td>
 						<td>{{formatDate(book.ReturnDate)}}</td>
+            <td>{{formatDate(book.ExpectedReturnDate)}}</td>
 					</tr>
 				</tbody>
 			</table>

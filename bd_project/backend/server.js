@@ -5,13 +5,13 @@ const cors = require('cors');
 const app = express();
 const bodyParser = require("body-parser");
 const port = 3080;
-const userId = '6460d1e3ac388251224c672f';
+const userId = '6460d1e3ac388251224c6730';
 app.use(bodyParser.json());
 app.use(cors());
+const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
 
 // Retrieve data from MongoDB and send it back to the frontend
-app.get('/api/data', async (req, res) => {
-  const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
+app.get('/api/bookData', async (req, res) => {
   const client = new MongoClient(uri);
   await client.connect();
   const db = client.db("library");
@@ -30,6 +30,22 @@ app.get('/api/data', async (req, res) => {
       },
     ];
 
+    const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
+
+    res.json({ bookData });
+  } catch (e) {
+    console.error(e);
+    res.json({ error: "Failed to retrieve data from database" });
+  } finally {
+    await client.close();
+  }
+});
+
+app.get('/api/userData', async (req, res) => {
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db("library");
+  try {
     const userPipeline = [
       {
         $match: {
@@ -59,11 +75,9 @@ app.get('/api/data', async (req, res) => {
       }
   ]
 
-    const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
-
     const userData = await db.collection("user").aggregate(userPipeline).toArray();
 
-    res.json({ bookData, userData });
+    res.json({ userData });
   } catch (e) {
     console.error(e);
     res.json({ error: "Failed to retrieve data from database" });
@@ -75,7 +89,6 @@ app.get('/api/data', async (req, res) => {
 app.post('/borrow/:id', async (req, res) => {
   try {
     const _id = req.params.id;
-    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
     const client = new MongoClient(uri);
     await client.connect();
     const db = client.db("library");
@@ -127,22 +140,30 @@ app.post('/borrow/:id', async (req, res) => {
 app.post('/return/:id', async (req, res) => {
   try {
     const BookID = parseInt(req.params.id);
-    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
     const client = new MongoClient(uri);
     await client.connect();
     const db = client.db("library");
 
     const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
-    console.log(user)
     if (user) {
       const borrowedBook = user.Borrow.find((book) => book.BookID === BookID);
-      console.log(borrowedBook.ReturnDate)
       if (borrowedBook.ReturnDate != null) {
         res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
       }
       else {
       borrowedBook.ReturnDate = new Date();
       await db.collection('user').updateOne({ _id: user._id }, { $set: { Borrow: user.Borrow } });
+
+      const returnedBook = await db.collection('book').findOne({ 'Copies.BookID': BookID });
+      const copyIndex = returnedBook.Copies.findIndex((copy) => copy.BookID === BookID);
+
+      returnedBook.InStock += 1;
+      returnedBook.Copies[copyIndex].Available = true;
+
+      await db.collection('book').updateOne(
+        { _id: new mongoose.Types.ObjectId(returnedBook._id) },
+        { $set: { InStock: returnedBook.InStock, Copies: returnedBook.Copies } }
+      );
       res.send('Książka została zwrócona.');
       }}
     else {

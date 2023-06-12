@@ -14,7 +14,7 @@ export class CatalogPageComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<any[]>('/api/data').subscribe((data) => {
+    this.http.get<any[]>('/api/bookData').subscribe((data) => {
       this.data = data;
       this.books = this.data.bookData;
       console.log(this.books);
