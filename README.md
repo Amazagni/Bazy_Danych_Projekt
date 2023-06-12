@@ -38,8 +38,8 @@ npm install
 npm run dev
 ```
 ### Schemat bazy danych
-Mamy 4 kolekcje:
-author
+Mamy 4 kolekcje:<br>
+Author
 ```js
 {
   "_id":{"$oid":"6460be09478e0704d8a9c19d"},
@@ -50,7 +50,7 @@ author
 }
 ```
 
-book
+Book
 ```js
 {
   "_id":{"$oid":"6460d5e70c6c0520811a03ef"},
@@ -68,7 +68,7 @@ book
     {"BookID":{"$numberInt":"20"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"}]
 }
 ```
-publisher
+Publisher
 ```js
 {
   "_id":{"$oid":"6460c22109009077c28112c6"},
@@ -84,7 +84,7 @@ publisher
   }
 }
 ```
-user
+User
 ```js
 {
   "_id":{"$oid":"6460d1e3ac388251224c6732"},
