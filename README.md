@@ -1,8 +1,12 @@
 # Aplikacja webowa biblioteki
 Marcin Chudy 
+
 mchudy@student.agh.edu.pl
+
 Adrian Madej
+
 adrianmadej@student.agh.edu.pl
+
 ### Opis projektu:
 Strona internetowa danej biblioteki. W bazie danych przechowywane są dane książek (wraz z jej autorami i wydawnictwami) oraz użytkowników danej biblioteki.
 
