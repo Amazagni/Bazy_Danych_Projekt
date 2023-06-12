@@ -107,28 +107,40 @@ User
 ### Najważniejsze funkcje
 #### Zwrot książki
 ```js
-app.post('/return/:id', async (req, res) => {
+app.post('/api/return/:id', async (req, res) => {
   try {
     const BookID = parseInt(req.params.id);
-    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
     const client = new MongoClient(uri);
     await client.connect();
     const db = client.db("library");
 
     const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
     if (user) {
-      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID);
-      if (borrowedBook.ReturnDate != null) {
+      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
+      if (borrowedBook == null) {
+        console.log(borrowedBook)
         res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
       }
       else {
       borrowedBook.ReturnDate = new Date();
       await db.collection('user').updateOne({ _id: user._id }, { $set: { Borrow: user.Borrow } });
+
+      const returnedBook = await db.collection('book').findOne({ 'Copies.BookID': BookID });
+      const copyIndex = returnedBook.Copies.findIndex((copy) => copy.BookID === BookID);
+
+      returnedBook.InStock += 1;
+      returnedBook.Copies[copyIndex].Available = true;
+
+      await db.collection('book').updateOne(
+        { _id: new mongoose.Types.ObjectId(returnedBook._id) },
+        { $set: { InStock: returnedBook.InStock, Copies: returnedBook.Copies } }
+      );
       res.send('Książka została zwrócona.');
       }}
     else {
       res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
     }
+
     client.close();
   } catch (err) {
     console.error('Błąd podczas aktualizacji ReturnDate:', err);
