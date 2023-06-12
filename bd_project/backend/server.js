@@ -86,7 +86,7 @@ app.get('/api/userData', async (req, res) => {
   }
 });
 
-app.post('/borrow/:id', async (req, res) => {
+app.post('/api/borrow/:id', async (req, res) => {
   try {
     const _id = req.params.id;
     const client = new MongoClient(uri);
@@ -137,7 +137,7 @@ app.post('/borrow/:id', async (req, res) => {
   }
 });
 
-app.post('/return/:id', async (req, res) => {
+app.post('/api/return/:id', async (req, res) => {
   try {
     const BookID = parseInt(req.params.id);
     const client = new MongoClient(uri);

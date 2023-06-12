@@ -17,7 +17,7 @@ export class ReturnPageComponent implements OnInit {
     const input = document.getElementById('numberInput') as HTMLInputElement;
     const _id = input.value;
     console.log(_id)
-    this.http.post('http://localhost:3080/return/' + _id, {}).subscribe(
+    this.http.post('/api/return/' + _id, {}).subscribe(
         (response) => {
           console.log(response);
         },

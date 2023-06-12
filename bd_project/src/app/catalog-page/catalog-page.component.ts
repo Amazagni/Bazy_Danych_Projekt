@@ -17,17 +17,13 @@ export class CatalogPageComponent implements OnInit {
     this.http.get<any[]>('/api/bookData').subscribe((data) => {
       this.data = data;
       this.books = this.data.bookData;
-      console.log(this.books);
     });
   }
 
   borrow(_id: string) {
     {
-      this.http.post('http://localhost:3080/borrow/' + _id, {}).subscribe(
+      this.http.post('/api/borrow/' + _id, {}).subscribe(
         (response) => {
-          console.log(response);
-          console.log("dziala!")
-          // Tutaj możesz obsłużyć odpowiedź z serwera po udanej zmianie ilości danych książek
         },
         (error) => {
           if (error.statusText == 'OK') {
@@ -37,7 +33,6 @@ export class CatalogPageComponent implements OnInit {
             alert('Wystąpił błąd: ' + error.error)
             console.log(error)
           }
-          // Tutaj możesz obsłużyć błąd związany z żądaniem HTTP
         });
 
     }
