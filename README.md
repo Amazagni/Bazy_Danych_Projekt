@@ -41,14 +41,68 @@ npm run dev
 Mamy 4 kolekcje:
 author
 ```js
-{"_id":{"$oid":"6460be09478e0704d8a9c19d"},
-"FirstName":"Adam",
-"LastName":"Mickiewicz",
-"BooksID":[],
-"Description":"Poeta, działacz polityczny, publicysta, filozof. Uważany za największego poetę polskiego romantyzmu."}
+{
+  "_id":{"$oid":"6460be09478e0704d8a9c19d"},
+  "FirstName":"Adam",
+  "LastName":"Mickiewicz",
+  "BooksID":[],
+  "Description":"Poeta, działacz polityczny, publicysta, filozof. Uważany za największego poetę polskiego romantyzmu."
+}
 ```
-...
 
+book
+```js
+{
+  "_id":{"$oid":"6460d5e70c6c0520811a03ef"},
+  "Title":"Pan Wołodyjowski",
+  "Description":"Trzecia i zarazem ostatnia powieść Trylogii Henryka Sienkiewicza.",
+  "ReleaseDate":{"$numberInt":"1888"},
+  "Genre":"Historyczna",
+  "AuthorID":{"$oid":"6460be09478e0704d8a9c19c"},
+  "InStock":{"$numberInt":"5"},
+  "Copies":[
+    {"BookID":{"$numberInt":"16"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"},
+    {"BookID":{"$numberInt":"17"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"},
+    {"BookID":{"$numberInt":"18"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"},
+    {"BookID":{"$numberInt":"19"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"},
+    {"BookID":{"$numberInt":"20"}, "PublisherID":{"$oid":"6460c22109009077c28112c5"}, "Available":true,"Language":"polski"}]
+}
+```
+publisher
+```js
+{
+  "_id":{"$oid":"6460c22109009077c28112c6"},
+  "Name":"Greg",
+  "Email":"greg@gmail.com",
+  "Phone":"012345678",
+  "BooksID":[],
+  "Address":{
+    "Country":"Polska",
+    "City":"Wrocław",
+    "PostalCode":"22-222",
+    "Street":"Kombatantów"
+  }
+}
+```
+user
+```js
+{
+  "_id":{"$oid":"6460d1e3ac388251224c6732"},
+  "FirstName":"Robert",
+  "LastName":"Lewandowski",
+  "Email":"robert@gmail.com",
+  "Phone":"546544542",
+  "Pesel":"02112341231",
+  "Borrow":[
+    {
+      "BookID":{"$numberInt":"7"},
+      "BorrowDate":{"$date":{"$numberLong":"1678143600000"}},
+      "ReturnDate":{"$date":{"$numberLong":"1680904800000"}},
+      "ExpectedReturnDate":{"$date":{"$numberLong":"1684101600000"}}
+    }
+  ]
+}
+```
 
 ### Najważniejsze funkcje
 #### Zwrot książki
