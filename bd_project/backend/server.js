@@ -146,8 +146,9 @@ app.post('/api/return/:id', async (req, res) => {
 
     const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
     if (user) {
-      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID);
-      if (borrowedBook.ReturnDate != null) {
+      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
+      if (borrowedBook == null) {
+        console.log(borrowedBook)
         res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
       }
       else {
@@ -180,6 +181,3 @@ app.post('/api/return/:id', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening on the port::${port}`);
 });
-
-
-
