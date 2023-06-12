@@ -45,7 +45,7 @@ Author
   "_id":{"$oid":"6460be09478e0704d8a9c19d"},
   "FirstName":"Adam",
   "LastName":"Mickiewicz",
-  "BooksID":[{"$oid":"6460d5e70c6c0520811a03ef"},{"$oid":"6460d5e70c6c0520811a03ec"},{"$oid":"6460d5e70c6c0520811a03ed"},{"$oid":"6460d5e70c6c0520811a03ee"}]
+  "BooksID":[{"$oid":"6460d5e70c6c0520811a03ef"},{"$oid":"6460d5e70c6c0520811a03ec"},{"$oid":"6460d5e70c6c0520811a03ed"},{"$oid":"6460d5e70c6c0520811a03ee"}],
   "Description":"Poeta, działacz polityczny, publicysta, filozof. Uważany za największego poetę polskiego romantyzmu."
 }
 ```
