@@ -104,62 +104,107 @@ User
 }
 ```
 
-### Najważniejsze funkcje
-#### Zwrot książki
+### Zapytania do bazy danych
+#### Wyciąganie danych o wszystkich książkach
 ```js
-app.post('/api/return/:id', async (req, res) => {
-  try {
-    const BookID = parseInt(req.params.id);
-    const client = new MongoClient(uri);
-    await client.connect();
-    const db = client.db("library");
+const bookPipeline = [
+      {
+        $lookup: {
+          from: "authors",
+          localField: "AuthorID",
+          foreignField: "_id",
+          as: "Author"
+        }
+      },
+      {
+        $unwind: "$Author"
+      },
+    ];
 
-    const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
-    if (user) {
-      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
-      if (borrowedBook == null) {
-        console.log(borrowedBook)
-        res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
-      }
-      else {
-      borrowedBook.ReturnDate = new Date();
-      await db.collection('user').updateOne({ _id: user._id }, { $set: { Borrow: user.Borrow } });
-
-      const returnedBook = await db.collection('book').findOne({ 'Copies.BookID': BookID });
-      const copyIndex = returnedBook.Copies.findIndex((copy) => copy.BookID === BookID);
-
-      returnedBook.InStock += 1;
-      returnedBook.Copies[copyIndex].Available = true;
-
-      await db.collection('book').updateOne(
-        { _id: new mongoose.Types.ObjectId(returnedBook._id) },
-        { $set: { InStock: returnedBook.InStock, Copies: returnedBook.Copies } }
-      );
-      res.send('Książka została zwrócona.');
-      }}
-    else {
-      res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
-    }
-
-    client.close();
-  } catch (err) {
-    console.error('Błąd podczas aktualizacji ReturnDate:', err);
-  }
-});
+    const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
 ```
-Na początku sprawdzam czy istnieje dany user, który wypożyczył daną książkę i czy ma aktualnie jakąkolwiek książkę do oddania. Jeśli istnieje to sprawdzam czy książką do oddania jest ta, której poszukujemy, jeśli tak to jest ona zwracana. W przeciwnym przypadku wyrzucany jest błąd.
+Wyciągamy kolekcję book, łącząc ją przy pomocy lookup z kolekcją authors.
 
-#### Wypożyczenie książki
+#### Wyciąganie danych o książkach danego autora
 ```js
-app.post('/borrow/:id', async (req, res) => {
-  try {
-    const _id = req.params.id;
-    const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
-    const client = new MongoClient(uri);
-    await client.connect();
-    const db = client.db("library");
+const firstName, lastName
+const bookPipeline = [
+      {
+        $lookup: {
+          from: "authors",
+          localField: "AuthorID",
+          foreignField: "_id",
+          as: "Author"
+        }
+      },
+      {
+        $unwind: "$Author"
+      },      {
+        $match: {
+          "Author.FirstName": firstName,
+          "Author.LastName": lastName
+        }
+      },
+    ];
 
-    const Copy = await db.collection("book").aggregate([
+    const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
+```
+Wyciągamy informacje o książkach danego autora znając jego imię oraz nazwisko.
+
+#### Wyciąganie wszystkich danych o danym użytkowniku
+```js
+ const userId
+ const userPipeline = [
+      {
+        $match: {
+          _id: new mongoose.Types.ObjectId(userId)
+        }
+      },
+      {
+        $unwind: "$Borrow"
+      },
+      {
+        $lookup: {
+          from: "book",
+          localField: "Borrow.BookID",
+          foreignField: "Copies.BookID",
+          as: "Borrow.bookDetails"
+        }
+      },
+      {
+        $unwind: "$Borrow.bookDetails"
+      },
+      {
+        $group: {
+          _id: "$_id",
+          username: { $first: "$username" },
+          borrowedBooks: { $push: "$Borrow" }
+        }
+      }
+  ]
+
+    const userData = await db.collection("user").aggregate(userPipeline).toArray();
+```
+Wyciągamy wszystkie dane o danym użytkowniku przy znajomości jego _id. Dodatkowo tworzymy tablicę obiektow Book wypożyczonych przez niego książek.
+
+#### Wyciąganie danych o autorach
+```js
+const authorsData = await db.collection('authors').aggregate([
+      {
+        $lookup: {
+          from: 'book',
+          localField: 'BooksID',
+          foreignField: '_id',
+          as: 'books'
+        }
+      }
+    ]).toArray();
+```
+Wyciągamy wszystkie dane o autorach i przy pomocy BookID tworzymy listę książek napisanych przez danego autora.
+
+#### Funkcja wypożyczenia danej książki
+```js
+ const Copy = await db.collection("book").aggregate([
       { $match: { _id: new mongoose.Types.ObjectId(_id) } },
       { $unwind: '$Copies' },
       { $match: { 'Copies.Available': true } },
@@ -170,7 +215,6 @@ app.post('/borrow/:id', async (req, res) => {
       res.status(404).send('Brak dostępnych egzemplarzy');
       return;
     }
-    console.log(Copy[0].Copies.BookID)
     const result = await db.collection("book").updateOne(
       {
         _id: new mongoose.Types.ObjectId(_id),
@@ -195,13 +239,47 @@ app.post('/borrow/:id', async (req, res) => {
         }}})
       res.send('Książka została wypożyczona.');
     }
-
-    client.close();
-  } catch (err) {
-    console.error('Błąd przy wypożyczaniu książki:', err);
-    res.status(500).send('Wystąpił błąd przy wypożyczaniu książki.');
-  }
-});
 ```
-Na początku sprawdzamy czy istnieje egzemplarz naszej ksiązki, który nie jest wypożyczony.
-Jeśli istnieje, to oznaczamy go w bazie jako wypożyczonego oraz zapisujemy dany egzemplarz w historii danego uzytkownika.
+Na początku sprawdzamy czy istnieje egzemplarz danej książki, który nie jest wypożyczony. Następnie zaznaczamy w bazie, że dany egzemplarz zostaje wypożyczony (jeśli któraś z czynności się nie powiedzie użytkownik zostaje o tym poinformowany). Na końcu dodajemy dany egzemplarz do książek wypożyczonych przez danego użytkownika.
+
+#### Funkcja zwracająca egzemplarz do biblioteki
+```js
+const BookID = parseInt(req.params.id);
+const user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null })
+    if (user) {
+      const borrowedBook = user.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
+      if (borrowedBook == null) {
+        console.log(borrowedBook)
+        res.status(404).send('Nikt nie wypożyczył książki o takim ID.');
+      }
+      else {
+      borrowedBook.ReturnDate = new Date();
+      await db.collection('user').updateOne({ _id: user._id }, { $set: { Borrow: user.Borrow } });
+
+      const returnedBook = await db.collection('book').findOne({ 'Copies.BookID': BookID });
+      const copyIndex = returnedBook.Copies.findIndex((copy) => copy.BookID === BookID);
+
+      returnedBook.InStock += 1;
+      returnedBook.Copies[copyIndex].Available = true;
+
+      await db.collection('book').updateOne(
+        { _id: new mongoose.Types.ObjectId(returnedBook._id) },
+        { $set: { InStock: returnedBook.InStock, Copies: returnedBook.Copies } }
+      );
+      res.send('Książka została zwrócona.');
+```
+Na początku sprawdzamy czy istnieje użytkownik, który wypożyczył książkę o danym numerze id i czy posiada on jakąś wypożyczoną książkę, jeśli tak to sprawdzamy czy to poszukiwany przez nas egzemplarz jest wypożyczony. Jeśli wszystko się zgadza to wpisujemy datę zwrocenia książki na aktualną datę oraz zapisujemy w bazie ze egzemplarz jest gotowy to ponownego wypożyczenia. W przeciwnym przypadku wyrzucamy błąd.
+
+#### Wyciąganie danych o konkretnym egzemplarzu 
+```js
+ const BookID = parseInt(req.params.id);
+  try {
+    let user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null });
+    let borrowedBook = user;
+    if (borrowedBook) {
+      borrowedBook = borrowedBook.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
+      borrowedBook.user = user._id
+    }
+```
+Przeszukujemy użytkowników w celu znalezienia, czy któryś z nich aktualnie ma wypożyczony dany egzemplarz.
+
