@@ -71,16 +71,16 @@ Book
 Publisher
 ```js
 {
-  "_id":{"$oid":"6460c22109009077c28112c6"},
-  "Name":"Greg",
-  "Email":"greg@gmail.com",
-  "Phone":"012345678",
-  "BooksID":[],
+  "_id":{"$oid":"6460c22109009077c28112c5"},
+  "Name":"Fabryka Słów",
+  "Email":"fabryka@gmail.com",
+  "Phone":"123456789",
+  "BooksID":[[{"$numberInt":"56"},{"$numberInt":"57"},...,{"$numberInt":"85"}],
   "Address":{
     "Country":"Polska",
-    "City":"Wrocław",
-    "PostalCode":"22-222",
-    "Street":"Kombatantów"
+    "City":"Rzeszów",
+    "PostalCode":"11-111",
+    "Street":"Piastowska"
   }
 }
 ```
