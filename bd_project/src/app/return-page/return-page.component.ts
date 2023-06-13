@@ -9,7 +9,12 @@ export class ReturnPageComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit(): void {
+  data: any;
+  book: any;
+
+  ngOnInit() {
+    this.book = null
+    this.data = null
   }
 
 
@@ -30,5 +35,28 @@ export class ReturnPageComponent implements OnInit {
             console.log(error)
           }
         });
+  };
+
+  checkStatus() {
+      const input = document.getElementById('statusInput') as HTMLInputElement;
+      const _id = input.value;
+      this.http.get<any[]>('/api/checkStatus/' + _id, {}).subscribe((data) => {
+        this.data = data;
+        this.book = this.data.borrowedBook;
+        console.log(this.book)
+        console.log(this.data)
+        if (this.book == null) {
+          alert('Egzemplarz jest w bibliotece!')
+        }
+      });
   }
+
+  formatDate(dateString: string) {
+    if (dateString == null) {
+      return "Wypożyczona"
+    }
+    const date = new Date(dateString);
+    const formattedDate = `${date.getUTCDate()}-${date.getUTCMonth() + 1}-${date.getUTCFullYear()}`;
+    return formattedDate;
+  };
 }

@@ -1,4 +1,17 @@
+
 <div class="container">
+  <h2>Zwrot</h2>
   <input type="number" id="numberInput" placeholder="Wpisz id książki">
   <button (click)="return()" id="submitButton">Zwróć</button>
 </div>
+<div class="container">
+  <h2>Status</h2>
+  <input type="number" id="statusInput" placeholder="Wpisz id książki">
+  <button (click)="checkStatus()" id="submitButton">Sprawdź status</button>
+  <div *ngIf="book">
+    <h3>Numer id użytkownika: {{book.user}}</h3>
+    <h3>Data wypożyczenia: {{formatDate(book.BorrowDate)}}</h3>
+    <h3>Przewidywana data zwrotu: {{formatDate(book.ExpectedReturnDate)}}</h3>
+  </div>
+</div>
+

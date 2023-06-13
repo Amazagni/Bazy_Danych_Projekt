@@ -238,6 +238,27 @@ app.post('/api/return/:id', async (req, res) => {
   }
 });
 
+app.get('/api/checkStatus/:id', async (req, res) => {
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db("library");
+  const BookID = parseInt(req.params.id);
+  try {
+    let user = await db.collection('user').findOne({ 'Borrow.BookID': BookID, 'Borrow.ReturnDate': null });
+    let borrowedBook = user;
+    if (borrowedBook) {
+      borrowedBook = borrowedBook.Borrow.find((book) => book.BookID === BookID && book.ReturnDate == null);
+      borrowedBook.user = user._id
+    }
+    res.json({ borrowedBook });
+  } catch (e) {
+    console.error(e);
+    res.json({ error: "Failed to retrieve data from database" });
+  } finally {
+    await client.close();
+  }
+});
+
 
 app.listen(port, () => {
   console.log(`Server listening on the port::${port}`);
