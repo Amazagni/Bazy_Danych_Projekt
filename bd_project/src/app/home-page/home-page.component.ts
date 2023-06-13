@@ -9,14 +9,15 @@ import { HttpClient } from '@angular/common/http';
 
 export class HomePageComponent implements OnInit {
 
-  data: any[] = [];
-
+  data: any;
+  authors: any[] = [];
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<any[]>('/api/data').subscribe((data) => {
+    this.http.get<any[]>('/api/authorsData').subscribe((data) => {
       this.data = data;
-      console.log(this.data);
+      this.authors = this.data.authorsData;
+      console.log(this.authors)
     });
   }
 }

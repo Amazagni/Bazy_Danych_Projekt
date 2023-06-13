@@ -6,12 +6,15 @@
 
 	<main>
 		<section>
-			<h2>Aktualności</h2>
-			<ul>
-				<li><a href="#">Artykul 1</a></li>
-				<li><a href="#">Artykul 2</a></li>
-				<li><a href="#">Artykul 3</a></li>
-			</ul>
+      <h1>Nasi autorzy</h1>
+			<div class="card" *ngFor="let author of authors">
+        <h2 class="title">{{author.FirstName}} {{author.LastName}}</h2>
+        <p class="description">{{author.Description}}</p>
+        <div *ngFor="let book of author.books">
+          <p class="description">{{book.Title}}</p>
+        </div>
+        <br>
+      </div>
 		</section>
 
 

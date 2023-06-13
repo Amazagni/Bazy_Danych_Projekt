@@ -10,7 +10,6 @@ app.use(bodyParser.json());
 app.use(cors());
 const uri = "mongodb+srv://marcinxkomputer:m4tB3SHDSzMIyhAg@cluster0.b1ip0ti.mongodb.net/";
 
-// Retrieve data from MongoDB and send it back to the frontend
 app.get('/api/bookData', async (req, res) => {
   const client = new MongoClient(uri);
   await client.connect();
@@ -78,6 +77,31 @@ app.get('/api/userData', async (req, res) => {
     const userData = await db.collection("user").aggregate(userPipeline).toArray();
 
     res.json({ userData });
+  } catch (e) {
+    console.error(e);
+    res.json({ error: "Failed to retrieve data from database" });
+  } finally {
+    await client.close();
+  }
+});
+
+app.get('/api/authorsData', async (req, res) => {
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db("library");
+  try {
+    const authorsData = await db.collection('authors').aggregate([
+      {
+        $lookup: {
+          from: 'book',
+          localField: 'BooksID',
+          foreignField: '_id',
+          as: 'books'
+        }
+      }
+    ]).toArray();
+
+    res.json({ authorsData });
   } catch (e) {
     console.error(e);
     res.json({ error: "Failed to retrieve data from database" });
