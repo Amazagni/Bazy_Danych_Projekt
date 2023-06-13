@@ -1,0 +1,118 @@
+[{
+  "_id": {
+    "$oid": "6460be09478e0704d8a9c19c"
+  },
+  "FirstName": "Henryk",
+  "LastName": "Sienkiewicz",
+  "BooksID": [
+    {
+      "$oid": "6460d5e70c6c0520811a03ef"
+    },
+    {
+      "$oid": "6460d5e70c6c0520811a03ec"
+    },
+    {
+      "$oid": "6460d5e70c6c0520811a03ed"
+    },
+    {
+      "$oid": "6460d5e70c6c0520811a03ee"
+    }
+  ],
+  "Description": "Powieściopisarz, nowelista, dziennikarz, publicysta. Pierwszy polski laureat literackiej Nagrody Nobla."
+},{
+  "_id": {
+    "$oid": "6460be09478e0704d8a9c19d"
+  },
+  "FirstName": "Adam",
+  "LastName": "Mickiewicz",
+  "BooksID": [
+    {
+      "$oid": "6460d86de7fd852bf3c773b6"
+    },
+    {
+      "$oid": "6460d86de7fd852bf3c773b7"
+    },
+    {
+      "$oid": "6460d86de7fd852bf3c773b8"
+    }
+  ],
+  "Description": "Poeta, działacz polityczny, publicysta, filozof. Uważany za największego poetę polskiego romantyzmu."
+},{
+  "_id": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "FirstName": "Joanne",
+  "LastName": "Rowling",
+  "BooksID": [
+    {
+      "$oid": "6460dfaa5df3b44e240b5800"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5803"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5805"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5804"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5801"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5806"
+    },
+    {
+      "$oid": "6460dfaa5df3b44e240b5802"
+    }
+  ],
+  "Description": "Brytyjska pisarka, scenarzystka, producentka filmowa i telewizyjna. Sławę przyniosła jej seria powieści Harry Potter."
+},{
+  "_id": {
+    "$oid": "6460be09478e0704d8a9c19e"
+  },
+  "FirstName": "Stephen",
+  "LastName": "King",
+  "BooksID": [
+    {
+      "$oid": "6460dad2fd30bee254efd8f4"
+    },
+    {
+      "$oid": "6460dad2fd30bee254efd8f5"
+    },
+    {
+      "$oid": "6460dad2fd30bee254efd8f3"
+    },
+    {
+      "$oid": "6460dad2fd30bee254efd8f2"
+    }
+  ],
+  "Description": "Amerykański pisarz specjalizujący się w literaturze grozy. Jednen z najbardziej poczytnych pisarzy na świecie."
+},{
+  "_id": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "FirstName": "Angus",
+  "LastName": "Watson",
+  "BooksID": [
+    {
+      "$oid": "6460dd1ae67e09593ee31511"
+    },
+    {
+      "$oid": "6460dd1ae67e09593ee3150e"
+    },
+    {
+      "$oid": "6460dd1ae67e09593ee3150f"
+    },
+    {
+      "$oid": "6460dd1ae67e09593ee3150c"
+    },
+    {
+      "$oid": "6460dd1ae67e09593ee3150d"
+    },
+    {
+      "$oid": "6460dd1ae67e09593ee31510"
+    }
+  ],
+  "Description": "Pisarz, mieszkający w Londynie. Jego największe bestsellery to powieści fantastyczne, osadzone w realiach epoki żelaza."
+}]

@@ -1,0 +1,1271 @@
+[{
+  "_id": {
+    "$oid": "6460d5e70c6c0520811a03ef"
+  },
+  "Title": "Pan Wołodyjowski",
+  "Description": "Trzecia i zarazem ostatnia powieść Trylogii Henryka Sienkiewicza.",
+  "ReleaseDate": 1888,
+  "Genre": "Historyczna",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19c"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 16,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 17,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 18,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 19,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 20,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d5e70c6c0520811a03ec"
+  },
+  "Title": "W pustyni i w puszczy",
+  "Description": "Najsłynniejsza powieść przygodowa Sienkiewicza. Czternastoletni Staś i ośmioletnia Nel  zostają uprowadzeni przez beduinów.",
+  "ReleaseDate": 1910,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19c"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 1,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 2,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 3,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 4,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 5,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d5e70c6c0520811a03ed"
+  },
+  "Title": "Ogniem i mieczem",
+  "Description": "Pierwsza z trzech powieści historycznych będących częścią Trylogii.",
+  "ReleaseDate": 1888,
+  "Genre": "Historyczna",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19c"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 6,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 7,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 8,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 9,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 10,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d5e70c6c0520811a03ee"
+  },
+  "Title": "Potop",
+  "Description": "Druga z powieści tworzących Trylogię Henryka Sienkiewicza.",
+  "ReleaseDate": 1886,
+  "Genre": "Historyczna",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19c"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 11,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 12,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 13,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 14,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 15,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d86de7fd852bf3c773b6"
+  },
+  "Title": "Pan Tadeusz",
+  "Description": "Stanowi spisaną trzynastozgłoskowcem, zawartą w dwunastu księgach epicką opowieść o szlachcie polskiej początku XIX wieku.",
+  "ReleaseDate": 1834,
+  "Genre": "Epika",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19d"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 21,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 22,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 23,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 24,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 25,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d86de7fd852bf3c773b7"
+  },
+  "Title": "Dziady część II",
+  "Description": "Utwór opisujący dawny obrzęd związany z przywoływaniem dusz zmarłych, w trakcie którego żywi pomagają umarłym w odzyskaniu spokoju ducha.",
+  "ReleaseDate": 1823,
+  "Genre": "Dramat",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19d"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 26,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 27,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 28,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 29,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 30,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d86de7fd852bf3c773b8"
+  },
+  "Title": "Dziady część III",
+  "Description": "Utwór jest próbą przełamania pasma nieszczęść dotykających naród polski. Mesjanizm jest tu drogą do objaśnienia sensu cierpienia prześladowanych Polaków.",
+  "ReleaseDate": 1832,
+  "Genre": "Dramat",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19d"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 31,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 32,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 33,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 34,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 35,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dad2fd30bee254efd8f4"
+  },
+  "Title": "Zielona Mila",
+  "Description": "Rodzina Creedów wprowadza się do nowego domu w Nowej Anglii. Piękna okolica, mili sąsiedzi. Ale...",
+  "ReleaseDate": 1996,
+  "Genre": "Horror",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19e"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 46,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 47,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 48,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 49,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 50,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dad2fd30bee254efd8f5"
+  },
+  "Title": "Pan Mercedes",
+  "Description": "Solidny kryminał, w którym rozgrywka psychologiczna emerytowanego detektywa jest równie istotna co same aspekty detektywistyczne.",
+  "ReleaseDate": 2014,
+  "Genre": "Dreszczowiec",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19e"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 51,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 52,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 53,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 54,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 55,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": false,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dad2fd30bee254efd8f3"
+  },
+  "Title": "To",
+  "Description": "uważana jako jedno z większych dzieł amerykańskiego mistrza horroru. Fabuła charakteryzuje się niecodziennym konceptem.",
+  "ReleaseDate": 1986,
+  "Genre": "Horror",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19e"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 41,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 42,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 43,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c8"
+      },
+      "Available": true,
+      "Language": "angielski"
+    },
+    {
+      "BookID": 44,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c8"
+      },
+      "Available": false,
+      "Language": "angielski"
+    },
+    {
+      "BookID": 45,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dad2fd30bee254efd8f2"
+  },
+  "Title": "Cmętarz zwieżąt",
+  "Description": "Rodzina Creedów wprowadza się do nowego domu w Nowej Anglii. Piękna okolica, mili sąsiedzi. Ale...",
+  "ReleaseDate": 1983,
+  "Genre": "Horror",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19e"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 36,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 37,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 38,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 39,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 40,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c7"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee31511"
+  },
+  "Title": "Gdzie boją się iść bogowie",
+  "Description": "Z dumnego plemienia Wotan pozostało kilkoro dorosłych, dwoje dzieci i dwa szopy.",
+  "ReleaseDate": 2021,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 81,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 82,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 83,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 84,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 85,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee3150e"
+  },
+  "Title": "Tron z żelaza",
+  "Description": "Ostatni tom epickiej trylogii fantasy, która nie schodzi z ust fanów na całym świecie.",
+  "ReleaseDate": 2016,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 66,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 67,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 68,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 69,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 70,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee3150f"
+  },
+  "Title": "Umrzesz kiedy umrzesz",
+  "Description": "Rzuć się więc w wir bitwy, bo możliwości są tylko dwie: albo czeka cię chwała zwycięzcy, albo zasiądziesz do stołu Odyna.",
+  "ReleaseDate": 2018,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 2,
+  "Copies": [
+    {
+      "BookID": 71,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 72,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 73,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 74,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 75,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee3150c"
+  },
+  "Title": "Czas Żelaza",
+  "Description": "Wszystkie ludy i królestwa zamieszkujące Wyspy Brytyjskie wyczekują momentu w którym nastąpi nieuchronny najazd Imperium Rzymskiego.",
+  "ReleaseDate": 2014,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 56,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 57,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 58,
+      "PublisherID": {
+        "$oid": "64610ffe5d495e08f3ec2f27"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 59,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 60,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee3150d"
+  },
+  "Title": "Żelazna wojna",
+  "Description": "Wojownicy Wieku Żelaza, Dug i Lowa, opanowali zamek Maidun i oswobodzili niewolników. Ale teraz muszą utrzymać twierdzę.",
+  "ReleaseDate": 2015,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 61,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 62,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 63,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 64,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 65,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dd1ae67e09593ee31510"
+  },
+  "Title": "Ziemi tej nie opuścisz",
+  "Description": "Emocjonujący pościg, który do samego końca trzyma w napięciu.",
+  "ReleaseDate": 2019,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c19f"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 76,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 77,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 78,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 79,
+      "PublisherID": {
+        "$oid": "646112e65d495e08f3ec2f28"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 80,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c5"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5800"
+  },
+  "Title": "Harry Potter i Kamień Filozoficzny",
+  "Description": "Sierota i podrzutek, od niemowlęcia wychowywany był przez wujowstwo, którzy traktowali go jak piąte koło u wozu.",
+  "ReleaseDate": 2002,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 86,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 87,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 88,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 89,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 90,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5803"
+  },
+  "Title": "Harry Potter i Czara Ognia",
+  "Description": "W tym roku w Szkole Magii i Czarodziejstwa Hogwart rozegra się Turniej Trójmagiczny, na który przybędą uczniowie z Bułgarii i Francjii.",
+  "ReleaseDate": 2005,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 101,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 102,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 103,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 104,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 105,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5805"
+  },
+  "Title": "Harry Potter i Książę Półkrwi",
+  "Description": "Po nieudanej próbie przechwycenia przepowiedni Lord Voldemort jest gotów uczynić wszystko, by zawładnąć światem czarodziejów.",
+  "ReleaseDate": 2007,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 111,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 112,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 113,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 114,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 115,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5804"
+  },
+  "Title": "Harry Potter i Zakon Feniksa",
+  "Description": "Harry znów spędza nudne, samotne wakacje w domu Dursleyów. Czeka go piąty rok nauki w Hogwarcie.",
+  "ReleaseDate": 2006,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 106,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 107,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 108,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 109,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 110,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5801"
+  },
+  "Title": "Harry Potter i Komnata Tajemnic",
+  "Description": "Harry po pełnym przygód roku w Hogwarcie spędza nudne wakacje u Dursleyów i z utęsknieniem wyczekuje powrotu do szkoły.",
+  "ReleaseDate": 2003,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 2,
+  "Copies": [
+    {
+      "BookID": 93,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 94,
+      "PublisherID": "6460c22109009077c28112c9",
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5806"
+  },
+  "Title": "Harry Potter i Insygnia Śmierci",
+  "Description": "Po śmierci Dumbledore'a Zakon Feniksa wzmaga swoją działalność, próbując przeciwstawić się coraz potężniejszym siłom śmierciożerców.",
+  "ReleaseDate": 2009,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 4,
+  "Copies": [
+    {
+      "BookID": 116,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": false,
+      "Language": "polski"
+    },
+    {
+      "BookID": 117,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 118,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 119,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 120,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460dfaa5df3b44e240b5802"
+  },
+  "Title": "Harry Potter i Więzień Azkabanu",
+  "Description": "Z pilnie strzeżonego więzienia dla czarodziejów ucieka niebezpieczny przestępca. Kim jest? Co go łączy z Harrym?",
+  "ReleaseDate": 2004,
+  "Genre": "Przygodowa",
+  "AuthorID": {
+    "$oid": "6460be09478e0704d8a9c1a0"
+  },
+  "InStock": 5,
+  "Copies": [
+    {
+      "BookID": 96,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 97,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 98,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 99,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    },
+    {
+      "BookID": 100,
+      "PublisherID": {
+        "$oid": "6460c22109009077c28112c9"
+      },
+      "Available": true,
+      "Language": "polski"
+    }
+  ]
+}]

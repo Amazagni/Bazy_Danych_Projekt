@@ -1,0 +1,286 @@
+[{
+  "_id": {
+    "$oid": "6460d1e3ac388251224c6732"
+  },
+  "FirstName": "Robert",
+  "LastName": "Lewandowski",
+  "Email": "robert@gmail.com",
+  "Phone": "546544542",
+  "Pesel": "02112341231",
+  "Borrow": [
+    {
+      "BookID": 7,
+      "BorrowDate": {
+        "$date": "2023-03-06T23:00:00.000Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-04-07T22:00:00.000Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-05-14T22:00:00.000Z"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d1e3ac388251224c6733"
+  },
+  "FirstName": "Tomasz",
+  "LastName": "Łysiak",
+  "Email": "tomasz@gmail.com",
+  "Phone": "533333213",
+  "Pesel": "66764234212",
+  "Borrow": [
+    {
+      "BookID": 8,
+      "BorrowDate": {
+        "$date": "2023-05-20T22:00:00.000Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-04T22:00:00.000Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-14T22:00:00.000Z"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d1e3ac388251224c6730"
+  },
+  "FirstName": "Marcin",
+  "LastName": "Chudy",
+  "Email": "marcin@gmail.com",
+  "Phone": "123123123",
+  "Pesel": "02132132134",
+  "Borrow": [
+    {
+      "BookID": 4,
+      "BorrowDate": {
+        "$date": "2023-03-12T23:00:00.000Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-05-13T22:00:00.000Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-04-14T22:00:00.000Z"
+      }
+    },
+    {
+      "BookID": 5,
+      "BorrowDate": {
+        "$date": "2023-06-16T22:00:00.000Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-10T17:59:56.373Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-07-16T22:00:00.000Z"
+      }
+    },
+    {
+      "BookID": 116,
+      "BorrowDate": {
+        "$date": "2023-06-12T15:06:49.654Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T15:07:48.329Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T15:06:49.654Z"
+      }
+    },
+    {
+      "BookID": 110,
+      "BorrowDate": {
+        "$date": "2023-06-12T15:08:59.598Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T15:10:19.570Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T15:08:59.598Z"
+      }
+    },
+    {
+      "BookID": 42,
+      "BorrowDate": {
+        "$date": "2023-06-12T15:11:41.695Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T15:12:21.220Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T15:11:41.695Z"
+      }
+    },
+    {
+      "BookID": 28,
+      "BorrowDate": {
+        "$date": "2023-06-12T15:45:28.784Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T15:46:18.243Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T15:45:28.784Z"
+      }
+    },
+    {
+      "BookID": 56,
+      "BorrowDate": {
+        "$date": "2023-06-12T15:53:04.766Z"
+      },
+      "ReturnDate": null,
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T15:53:04.766Z"
+      }
+    },
+    {
+      "BookID": 35,
+      "BorrowDate": {
+        "$date": "2023-06-12T16:09:53.904Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T16:12:37.950Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T16:09:53.904Z"
+      }
+    },
+    {
+      "BookID": 36,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:11:04.715Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T17:11:54.641Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:11:04.715Z"
+      }
+    },
+    {
+      "BookID": 71,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:35:06.156Z"
+      },
+      "ReturnDate": null,
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:35:06.156Z"
+      }
+    },
+    {
+      "BookID": 72,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:35:17.229Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T17:48:04.122Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:35:17.229Z"
+      }
+    },
+    {
+      "BookID": 75,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:35:21.926Z"
+      },
+      "ReturnDate": null,
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:35:21.926Z"
+      }
+    },
+    {
+      "BookID": 73,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:35:23.372Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T17:38:15.816Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:35:23.372Z"
+      }
+    },
+    {
+      "BookID": 73,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:38:37.081Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T17:46:16.055Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:38:37.081Z"
+      }
+    },
+    {
+      "BookID": 73,
+      "BorrowDate": {
+        "$date": "2023-06-12T17:47:41.282Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T17:47:53.769Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T17:47:41.282Z"
+      }
+    },
+    {
+      "BookID": 94,
+      "BorrowDate": {
+        "$date": "2023-06-12T18:24:56.186Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-12T18:25:20.572Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-26T18:24:56.186Z"
+      }
+    },
+    {
+      "BookID": 2,
+      "BorrowDate": {
+        "$date": "2023-06-13T07:44:03.564Z"
+      },
+      "ReturnDate": null,
+      "ExpectedReturnDate": {
+        "$date": "2023-06-27T07:44:03.564Z"
+      }
+    },
+    {
+      "BookID": 22,
+      "BorrowDate": {
+        "$date": "2023-06-13T08:29:52.246Z"
+      },
+      "ReturnDate": {
+        "$date": "2023-06-13T09:42:31.732Z"
+      },
+      "ExpectedReturnDate": {
+        "$date": "2023-06-27T08:29:52.246Z"
+      }
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "6460d1e3ac388251224c672f"
+  },
+  "FirstName": "Adrian",
+  "LastName": "Madej",
+  "Email": "adrian@gmail.com",
+  "Phone": "098765432",
+  "Pesel": "12345678901",
+  "Borrow": []
+},{
+  "_id": {
+    "$oid": "6460d1e3ac388251224c6731"
+  },
+  "FirstName": "Adam",
+  "LastName": "Bilard",
+  "Email": "adam@wp.pl",
+  "Phone": "098908299",
+  "Pesel": "02344423121",
+  "Borrow": []
+}]
