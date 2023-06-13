@@ -1,3 +1,7 @@
+<div class="container">
+  <input type="string" id="numberInput" placeholder="Wpisz autora">
+  <button (click)="find()" id="submitButton">Znajdź</button>
+</div>
 <div class="card_container">
   <div class="card" *ngFor="let book of books">
     <h2 class="title">{{book.Title}}</h2>

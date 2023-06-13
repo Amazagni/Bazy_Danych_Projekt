@@ -40,6 +40,43 @@ app.get('/api/bookData', async (req, res) => {
   }
 });
 
+app.get('/api/bookByAuthor/:id', async (req, res) => {
+  const client = new MongoClient(uri);
+  await client.connect();
+  const db = client.db("library");
+  const name = req.params.id;
+  const [firstName, lastName] = name.split('_');
+  try {
+    const bookPipeline = [
+      {
+        $lookup: {
+          from: "authors",
+          localField: "AuthorID",
+          foreignField: "_id",
+          as: "Author"
+        }
+      },
+      {
+        $unwind: "$Author"
+      },      {
+        $match: {
+          "Author.FirstName": firstName,
+          "Author.LastName": lastName
+        }
+      },
+    ];
+
+    const bookData = await db.collection("book").aggregate(bookPipeline).toArray();
+
+    res.json({ bookData });
+  } catch (e) {
+    console.error(e);
+    res.json({ error: "Failed to retrieve data from database" });
+  } finally {
+    await client.close();
+  }
+});
+
 app.get('/api/userData', async (req, res) => {
   const client = new MongoClient(uri);
   await client.connect();
